@@ -1,0 +1,13 @@
+kind: "BuildConfig"
+apiVersion: "build.openshift.io/v1"
+metadata:
+name: "mypipeline"
+spec:
+source:
+contextDir: jenkins
+git:
+uri: "https://github.com/mfarag10/ocp4"
+ref: "master"
+strategy:
+jenkinsPipelineStrategy:
+type: JenkinsPipeline
